@@ -63,37 +63,17 @@
 
 				<div class="3u">
 					<section class="box">
-						<h2>항공권 등록</h2>
+						<h2>항공권 조회</h2>
 						<p class="subtitle"></p>
 						<ul class="style1">
-						<br/>
-							관리자는 <br/><br/> 항공권을 등록할 수 있다.
+							<br/>
+							관리자는 <br/><br/> 등록된 항공권을 조회할 수 있다.
 							<br/><br/><br/>
 						</ul>
-						
-					</section>
-				</div>
-				
-				<div class="4u">
-					<section class="box">
-						<h2>항공권 등록</h2>
-						<p class="subtitle"></p>
-						<ul class="style1">
-						<br/>
-							<form action ="ex21_ok.jsp" method="post">
-								항공권 id(airid) : <input name = "airid"><br><br/><br/>
-								고객 id(custid) : <input name ="custid"><br><br/><br/>
-								
-								<input type ="submit" value="예약하기">
-							</form>
-							
-							<a href = "http://localhost:8080/Hoteltest/Home.jsp">페이지 이동하기</a>
 						</ul>
-						
 					</section>
 				</div>
 			
-				
 			</div>
 
 		</div>

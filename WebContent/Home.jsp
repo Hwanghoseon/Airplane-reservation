@@ -64,41 +64,71 @@
 
 				<div class="3u">
 					<section class="box">
-						<h2>항공권 등록</h2>
+						<h2>항공권 예약하기</h2>
 						<p class="subtitle"></p>
 						<ul class="style1">
 						<br/>
-							관리자는 <br/><br/> 항공권을 등록할 수 있다.
+							고객은 <br/><br/> 항공권을 예약할 수 있다.
 							<br/><br/><br/>
 						</ul>
-						<p><a href="http://localhost:8080/Hoteltest/AddAirplane.jsp" class="button"><span>Read More</span></a></p>
+						<p><a href="http://localhost:8080/Hoteltest/AddReAirplane.jsp" class="button"><span>Read More</span></a></p>
 					</section>
 				</div>
 				<div class="3u">
 					<section class="box">
-						<h2>항공권 삭제</h2>
+						<h2>항공권 예약 취소</h2>
 						<p class="subtitle"></p>
 						<ul class="style1">
 							<br/>
-							관리자는 <br/><br/> 항공권을 이미 등록된<br/><br/>항공권을 삭제할 수 있다.
+							고객은 <br/><br/> 예약된 항공권을<br/><br/>   취소할 수 있다.
 						</ul>
 						</ul>
-						<p><a href="http://localhost:8080/Hoteltest/Customer.jsp" class="button"><span>Read More</span></a></p>
+						<p><a href="http://localhost:8080/Hoteltest/DelReAirplane.jsp" class="button"><span>Read More</span></a></p>
 					</section>
 				</div>
 				<div class="3u">
 					<section class="box">
-						<h2>항공권 수정</h2>
+						<h2>항공권 예약 수정</h2>
 						<p class="subtitle"></p>
 						<ul class="style1">
 							<br/>
-							관리자는 <br/><br/> 항공권을 이미 등록된<br/><br/>항공권을 수정할 수 있다.
+							고객은 <br/><br/> 예약된 항공권을<br/><br/>   수정할 수 있다.
 						</ul>
 						</ul>
-						<p><a href="http://localhost:8080/Hoteltest/ModAirplane.jsp" class="button"><span>Read More</span></a></p>
+						<p><a href="http://localhost:8080/Hoteltest/ModReAirplane.jsp" class="button"><span>Read More</span></a></p>
 					</section>
 				</div>
 				<div class="3u">
+					<section class="box">
+						<h2>항공권 예약 조회</h2>
+						<p class="subtitle"></p>
+						<ul class="style1">
+							<br/>
+							고객은 <br/><br/> 예약한 항공권을<br/><br/>  조회할 수 있다.
+						</ul>
+						</ul>
+						<p><a href="http://localhost:8080/Hoteltest/PrintReAirplane.jsp" class="button"><span>Read More</span></a></p>
+					</section>
+				</div>
+			
+			</div>
+
+		<!-- Wrapper Ends Here -->
+		
+		<div id="marketing" class="row">
+				
+				<!-- Content Area -->
+				<div id="content" class="12u skel-cell-important">
+					
+					<!-- Main Content Area -->
+					<section>
+						<p><a href="#"><img src="re/images/pics02.jpg" alt=""></a></p>
+						
+					</section>
+					
+					</div>
+					<!-- Two Column Area -->
+						<div class="4u">
 					<section class="box">
 						<h2>항공권 조회</h2>
 						<p class="subtitle"></p>
@@ -111,12 +141,11 @@
 						<p><a href="http://localhost:8080/Hoteltest/PrintAirplane.jsp" class="button"><span>Read More</span></a></p>
 					</section>
 				</div>
-			
+
+				</div>
 			</div>
-
 		</div>
-		<!-- Wrapper Ends Here -->
-
+		
 		<!-- Copyright -->
 		<div id="copyright">
 			<div class="container">

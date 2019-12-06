@@ -63,11 +63,11 @@
 
 				<div class="3u">
 					<section class="box">
-						<h2>항공권 조회</h2>
+						<h2>항공권 등록</h2>
 						<p class="subtitle"></p>
 						<ul class="style1">
 						<br/>
-							고객은 <br/><br/> 항공권을 조회할 수 있다.
+							관리자는 <br/><br/> 항공권을 등록할 수 있다.
 							<br/><br/><br/>
 						</ul>
 						
@@ -76,13 +76,14 @@
 				
 				<div class="4u">
 					<section class="box">
-						<h2>항공권 조회</h2>
+						<h2>항공권 등록</h2>
 						<p class="subtitle"></p>
 						<ul class="style1">
 						<br/>
-							<form action ="Addair.jsp" method="post">
-								항공권 id(airid) : <input name = "airid"><br><br/><br/>
-								고객 id(custid) : <input name ="custid"><br><br/><br/>
+							<form action ="<%=request.getContextPath()%>/Addair.jsp" method="post">
+								고객 id (custid) : <input name ="Custid" id="Custid"><br><br/><br/>
+								항공권 id (airid) : <input name = "Airid" id="Airid"><br><br/><br/>
+								출발날짜  (date)   : <input name = "departuredate" id="departuredate"><br><br/><br/>
 								
 								<input type ="submit" value="예약하기">
 							</form>

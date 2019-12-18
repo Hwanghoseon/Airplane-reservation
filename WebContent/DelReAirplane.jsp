@@ -28,6 +28,8 @@
 		<link rel="stylesheet" href="re/css/style.css" />
 		<link rel="stylesheet" href="re/css/style-desktop.css" />
 	
+	
+	
 	<title>Insert title here</title>
 </head>
 	<body class="homepage">
@@ -63,13 +65,32 @@
 
 				<div class="3u">
 					<section class="box">
-						<h2>항공권 삭제</h2>
+						<h2>항공권 예약취소</h2>
 						<p class="subtitle"></p>
 						<ul class="style1">
 							<br/>
-							관리자는 <br/><br/> 항공권을 이미 등록된<br/><br/>항공권을 삭제할 수 있다.
+							관리자는 <br/><br/> 항공권을 이미 예약된<br/><br/>항공권을 취소할 수 있다.
 						</ul>
 						</ul>
+					</section>
+				</div>
+				
+			
+				<div class="4u">
+					<section class="box">
+						<h2>항공권 예약취소</h2>
+						<p class="subtitle"></p>
+						<ul class="style1">
+						<br/>
+							<form name="frm1" action ="<%=request.getContextPath()%>/Delair.jsp" method="post">
+								예약 id (Airplanereservationid) : <input name ="Airplanereservationid" id="Airplanereservationid"><br><br/><br/>
+								<input type ="submit" value="예약취소하기">
+							</form>
+							
+							<br/><br/><br/><br/>
+							<a href = "http://localhost:8080/Hoteltest/Home.jsp">페이지 이동하기</a>
+						</ul>
+						
 					</section>
 				</div>
 			

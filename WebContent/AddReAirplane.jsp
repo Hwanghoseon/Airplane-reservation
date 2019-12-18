@@ -63,11 +63,11 @@
 
 				<div class="3u">
 					<section class="box">
-						<h2>항공권 등록</h2>
+						<h2>항공권 예약</h2>
 						<p class="subtitle"></p>
 						<ul class="style1">
 						<br/>
-							관리자는 <br/><br/> 항공권을 등록할 수 있다.
+							관리자는 <br/><br/> 항공권을 예약할 수 있다.
 							<br/><br/><br/>
 						</ul>
 						
@@ -76,7 +76,7 @@
 				
 				<div class="4u">
 					<section class="box">
-						<h2>항공권 등록</h2>
+						<h2>항공권 예약</h2>
 						<p class="subtitle"></p>
 						<ul class="style1">
 						<br/>
@@ -88,6 +88,7 @@
 								<input type ="submit" value="예약하기">
 							</form>
 							
+							<br/><br/><br/><br/>
 							<a href = "http://localhost:8080/Hoteltest/Home.jsp">페이지 이동하기</a>
 						</ul>
 						

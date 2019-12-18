@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import ="java.sql.*" %>
+<%@ page import ="java.util.InputMismatchException" %>
+<%@ page import ="java.util.Scanner" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -63,17 +66,79 @@
 
 				<div class="3u">
 					<section class="box">
-						<h2>항공권 조회</h2>
+						<h2>항공권 예약조회</h2>
 						<p class="subtitle"></p>
 						<ul class="style1">
 							<br/>
-							관리자는 <br/><br/> 등록된 항공권을 조회할 수 있다.
+							사용자는 <br/><br/> 예약한 항공권을 조회할 수 있다.
 							<br/><br/><br/>
 						</ul>
 						</ul>
 					</section>
 				</div>
 			
+				<div class="4u">
+					<section class="box">
+						<h2>항공권 예약조회</h2>
+						<p class="subtitle"></p>
+						<ul class="style1">
+						<br/>
+							<%
+								request.setCharacterEncoding("UTF-8");
+							
+								PreparedStatement pstmt = null;
+								Connection con = null;
+								
+								try{
+									String dbURL="jdbc:mysql://127.0.0.1:3306/air?serverTimezone=UTC";                             
+						            String dbID="root";
+						            String dbPassword="a123456";
+						            Class.forName("com.mysql.cj.jdbc.Driver");
+						            con=DriverManager.getConnection(dbURL,dbID,dbPassword);
+						            
+						            Statement stmt=con.createStatement();
+									ResultSet rs=stmt.executeQuery("SELECT * FROM airplanereservation");
+									
+							%>
+								<table class="table table-dark">
+									<tr>
+										<th>항공권 예약 번호</th>
+										<th>고객 id</th>
+										<th>항공권 id</th>
+										<th>출발날짜</th>
+									</tr>
+									
+							<%
+								while(rs.next()){
+							%><tr>
+								<td><%=rs.getInt(1) %></td>
+								<td><%=rs.getInt(2) %></td>
+								<td><%=rs.getInt(3) %></td>
+								<td><%=rs.getString(4) %></td>
+							</tr>
+								
+							<%
+								}
+							%></table>
+							
+							<%
+								rs.close();
+								stmt.close();
+								con.close();
+								}
+								catch (SQLException e) {
+								      out.println("err:"+e.toString());
+								}
+							%>
+							
+							</br></br><br/><br/>
+							<a href = "http://localhost:8080/Hoteltest/Home.jsp">페이지 이동하기</a>
+						</ul>
+						
+					</section>
+				</div>				
+				
+				
 			</div>
 
 		</div>

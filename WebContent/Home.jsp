@@ -88,14 +88,15 @@
 				</div>
 				<div class="3u">
 					<section class="box">
-						<h2>항공권 예약 수정</h2>
+						<h2>항공권 조회</h2>
 						<p class="subtitle"></p>
 						<ul class="style1">
 							<br/>
-							고객은 <br/><br/> 예약된 항공권을<br/><br/>   수정할 수 있다.
+							관리자는 <br/><br/> 등록된 항공권을 조회할 수 있다.
+							<br/><br/><br/>
 						</ul>
 						</ul>
-						<p><a href="http://localhost:8080/Hoteltest/ModReAirplane.jsp" class="button"><span>Read More</span></a></p>
+						<p><a href="http://localhost:8080/Hoteltest/PrintAirplane.jsp" class="button"><span>Read More</span></a></p>
 					</section>
 				</div>
 				<div class="3u">
@@ -115,34 +116,6 @@
 
 		<!-- Wrapper Ends Here -->
 		
-		<div id="marketing" class="row">
-				
-				<!-- Content Area -->
-				<div id="content" class="12u skel-cell-important">
-					
-					<!-- Main Content Area -->
-					<section>
-						<p><a href="#"><img src="re/images/pics02.jpg" alt=""></a></p>
-						
-					</section>
-					
-					</div>
-					<!-- Two Column Area -->
-						<div class="4u">
-					<section class="box">
-						<h2>항공권 조회</h2>
-						<p class="subtitle"></p>
-						<ul class="style1">
-							<br/>
-							관리자는 <br/><br/> 등록된 항공권을 조회할 수 있다.
-							<br/><br/><br/>
-						</ul>
-						</ul>
-						<p><a href="http://localhost:8080/Hoteltest/PrintAirplane.jsp" class="button"><span>Read More</span></a></p>
-					</section>
-				</div>
-
-				</div>
 			</div>
 		</div>
 		

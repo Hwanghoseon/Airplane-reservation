@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import ="java.sql.*" %>
+<%@ page import ="java.util.InputMismatchException" %>
+<%@ page import ="java.util.Scanner" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -80,13 +83,57 @@
 						<p class="subtitle"></p>
 						<ul class="style1">
 						<br/>
-							<form action ="Addair.jsp" method="post">
-								항공권 id(airid) : <input name = "airid"><br><br/><br/>
-								고객 id(custid) : <input name ="custid"><br><br/><br/>
-								
-								<input type ="submit" value="예약하기">
-							</form>
+							<%
+								request.setCharacterEncoding("UTF-8");
 							
+								PreparedStatement pstmt = null;
+								Connection con = null;
+								
+								try{
+									String dbURL="jdbc:mysql://127.0.0.1:3306/air?serverTimezone=UTC";                             
+						            String dbID="root";
+						            String dbPassword="a123456";
+						            Class.forName("com.mysql.cj.jdbc.Driver");
+						            con=DriverManager.getConnection(dbURL,dbID,dbPassword);
+						            
+						            Statement stmt=con.createStatement();
+									ResultSet rs=stmt.executeQuery("SELECT * FROM airplane");
+									
+							%>
+								<table class="table table-dark">
+									<tr>
+										<th>항공권 상품 번호</th>
+										<th>항공사 이름</th>
+										<th>출발지</th>
+										<th>도착지</th>
+										<th>가격</th>
+									</tr>
+									
+							<%
+								while(rs.next()){
+							%><tr>
+								<td><%=rs.getInt(1) %></td>
+								<td><%=rs.getString(2) %></td>
+								<td><%=rs.getString(3) %></td>
+								<td><%=rs.getString(4) %></td>
+								<td><%=rs.getInt(5) %></td>
+							</tr>
+								
+							<%
+								}
+							%></table>
+							
+							<%
+								rs.close();
+								stmt.close();
+								con.close();
+								}
+								catch (SQLException e) {
+								      out.println("err:"+e.toString());
+								}
+							%>
+							
+							</br></br><br/><br/>
 							<a href = "http://localhost:8080/Hoteltest/Home.jsp">페이지 이동하기</a>
 						</ul>
 						
